@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Management</title>
+    <link rel="stylesheet" href="/static/profiles/styles.css">
+</head>
+<body>
+    <h1>User Profile</h1>
+    <p><strong>First Name:</strong> {{ user.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>PAN Card:</strong> {{ user.pan_card }}</p>
+    <p><strong>City:</strong> {{ user.city }}</p>
+    <p><strong>State:</strong> {{ user.state }}</p>
+    <p><strong>Occupation:</strong> {{ user.occupation }}</p>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    <p><strong>Last Updated:</strong> {{ user.last_updated }}</p>
+
+    <a href="{% url 'update_profile' mobile_number=user.mobile_number %}">
+        <button>Update Profile</button>
+    </a>
+
+    <a href="{% url 'login' %}">
+        <button>Back</button>
+    </a>
+
+    
+</body>
+</html>
